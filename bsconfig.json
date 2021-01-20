@@ -1,0 +1,17 @@
+{
+  "name": "@bettercart/rescript-dinero",
+  "namespace": "Dinero",
+  "version": "0.0.1",
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "warnings": {
+    "error": "+101"
+  }
+}
