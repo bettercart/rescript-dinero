@@ -1,6 +1,6 @@
 {
   "name": "@bettercart/rescript-dinero",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "sources": {
     "dir": "src",
     "subdirs": true
