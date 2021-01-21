@@ -58,9 +58,9 @@ Dinero has an export for it self global instance `Dinero.dineroJs` - this will b
 
 Set Globals
 ```res
-  Dinero.setLocale(Dinero.dineroJs, 'us-en')
+  Dinero.setLocale(Dinero.dineroJs, "us-en")
   
-  Dinero.setLocale(Dinero.dineroJs, 'us-en')
+  Dinero.setLocale(Dinero.dineroJs, "us-en")
 ```
 
 Access Globals:
