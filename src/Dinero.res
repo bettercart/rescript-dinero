@@ -1,4 +1,4 @@
-@bs.deriving(jsConverter)
+@deriving(jsConverter)
 type roundingMode = [
   | #HALF_ODD
   | #HALF_EVEN
@@ -25,30 +25,30 @@ type dineroJs = {
   globalExchangeRatesApi: globalExchangeRatesApi,
 }
 
-@bs.module("dinero.js") @bs.val external dineroJs: dineroJs = "default"
+@module("dinero.js") @val external dineroJs: dineroJs = "default"
 
-@bs.set
+@set
 external setDefaultAmount: (dineroJs, int) => unit = "defaultAmount"
-@bs.set
+@set
 external setDefaultCurrency: (dineroJs, string) => unit = "defaultCurrency"
-@bs.set
+@set
 external setDefaultPrecision: (dineroJs, int) => unit = "defaultPrecision"
 
-@bs.set
+@set
 external setGlobalLocale: (dineroJs, string) => unit = "globalLocale"
-@bs.set
+@set
 external setGlobalFormat: (dineroJs, string) => unit = "globalFormat"
-@bs.set
+@set
 external setGlobalRoundingMode: (dineroJs, string) => unit = "globalRoundingMode"
-@bs.set
+@set
 external setGlobalFormatRoundingMode: (dineroJs, string) => unit = "globalFormatRoundingMode"
-@bs.set
+@set
 external setGlobalExchangeRatesApi: (dineroJs, globalExchangeRatesApi) => unit =
   "globalExchangeRatesApi"
 
 type options
 
-@bs.obj
+@obj
 external options: (~amount: int=?, ~currency: string=?, ~precision: int=?, unit) => options = ""
 
 type convertOptions = {
@@ -89,9 +89,10 @@ type rec dinero = {
   toRoundedUnit: (. int, roundingMode) => int,
   toObject: (. unit) => Js.Json.t,
   toJSON: (. unit) => Js.Json.t,
+  toUnit: (. unit) => float,
 }
 
-@bs.module("dinero.js") external create: options => dinero = "default"
+@module("dinero.js") external create: options => dinero = "default"
 
-@bs.send external minimum: (dineroJs, array<dinero>) => dinero = "minimum"
-@bs.send external maximum: (dineroJs, array<dinero>) => dinero = "maximum"
+@send external minimum: (dineroJs, array<dinero>) => dinero = "minimum"
+@send external maximum: (dineroJs, array<dinero>) => dinero = "maximum"
