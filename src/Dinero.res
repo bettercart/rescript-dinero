@@ -25,7 +25,7 @@ type dineroJs = {
   globalExchangeRatesApi: globalExchangeRatesApi,
 }
 
-@module("dinero.js") @val external dineroJs: dineroJs = "default"
+@module("dinero.js") @val external dineroJs: dineroJs = "dinero.js"
 
 @set
 external setDefaultAmount: (dineroJs, int) => unit = "defaultAmount"
@@ -92,7 +92,7 @@ type rec dinero = {
   toUnit: (. unit) => float,
 }
 
-@module("dinero.js") external create: options => dinero = "default"
+@module("dinero.js") external create: options => dinero = "dinero.js"
 
 @send external minimum: (dineroJs, array<dinero>) => dinero = "minimum"
 @send external maximum: (dineroJs, array<dinero>) => dinero = "maximum"
