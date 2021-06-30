@@ -1,12 +1,12 @@
 {
   "name": "@bettercart/rescript-dinero",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sources": {
     "dir": "src",
     "subdirs": true
   },
   "package-specs": {
-    "module": "commonjs",
+    "module": "es6",
     "in-source": true
   },
   "suffix": ".bs.js",

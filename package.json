@@ -1,6 +1,6 @@
 {
   "name": "@bettercart/rescript-dinero",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://getbettercart.com",
   "repository": "https://github.com/bettercart/rescript-dinero.git",
   "author": "Better Cart, Inc",
@@ -21,7 +21,7 @@
     "res:start": "rescript build -w"
   },
   "devDependencies": {
-    "rescript": "9.1.2"
+    "rescript": "9.1.4"
   },
   "dependencies": {
     "dinero.js": "1.8.1"
