@@ -15,7 +15,7 @@ type globalExchangeRatesApi = {
 }
 
 type dineroJs = {
-  defaultAmount: int,
+  defaultAmount: float,
   defaultCurrency: string,
   defaultPrecision: int,
   globalLocale: string,
@@ -49,7 +49,7 @@ external setGlobalExchangeRatesApi: (dineroJs, globalExchangeRatesApi) => unit =
 type options
 
 @obj
-external options: (~amount: int=?, ~currency: string=?, ~precision: int=?, unit) => options = ""
+external options: (~amount: float=?, ~currency: string=?, ~precision: int=?, unit) => options = ""
 
 type convertOptions = {
   currency: string,
@@ -60,7 +60,7 @@ type convertOptions = {
 }
 
 type rec dinero = {
-  getAmount: (. unit) => int,
+  getAmount: (. unit) => float,
   getCurrency: (. unit) => string,
   getLocale: (. unit) => string,
   setLocale: (. string) => dinero,
@@ -86,7 +86,7 @@ type rec dinero = {
   hasSameCurrency: (. dinero) => bool,
   hasSameAmount: (. dinero) => bool,
   toFormat: (. string, roundingMode) => string,
-  toRoundedUnit: (. int, roundingMode) => int,
+  toRoundedUnit: (. int, roundingMode) => float,
   toObject: (. unit) => Js.Json.t,
   toJSON: (. unit) => Js.Json.t,
   toUnit: (. unit) => float,
